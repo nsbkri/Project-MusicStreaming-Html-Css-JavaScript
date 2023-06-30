@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TuneVibes Playlist</title>
+    <link rel="stylesheet" href="Playlist.css">
+    <script src="https://kit.fontawesome.com/3793324eed.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+    <nav>
+        <a href="../Beranda/Beranda.html">Beranda</a>
+        <a href="../About/AboutIn.html">About</a>
+        <a href="Playlist.html">My Playlist<span></span></a>
+        <div class="profile">
+            <div class="user">
+                <img src="img/profile.png" alt="User" title="Example profile">
+            </div>
+            <div class="logout">
+                <button title="Sign Out" id="logout" 
+                onclick="logout()">
+                    <i class="fas fa-sign-out-alt" style="font-size: 20px;"></i>
+                </button>  
+            </div>
+        </div> 
+    </nav>
+
+    <div class="main">
+        <div class="main-info">
+            <img class="main-image" src="img/0.jpg" alt="">
+        </div>
+        <div class="main-queue">
+            <div class="main-queue-head">
+                <div class="queue-head-1 active">
+                    <h4>PLAYLIST</h4>
+                </div>
+            </div>
+
+            <div class="main-queue-playlist d-flex">
+                <ul>
+                    <li id="a">
+                        <img src="img/1.jpg" alt="Crazy Over You - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Crazy Over You</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+                    <li id="b">
+                        <img src="img/2.jpg" alt="Don’t Know What to Do - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Don’t Know What to Do</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+
+                    </li>
+                    <li id="c">
+                        <img src="img/3.jpg" alt="Forever Young - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Forever Young</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                         <p class="time">0:00</p>
+                    </li>
+
+                    <li id="d">
+                        <img src="img/4.jpg" alt="Hal - L">
+                        <div class="playlist-text">
+                            <h5>Hal</h5>
+                            <p>L</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="e">
+                        <img src="img/5.jpg" alt="Hope Not - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Hope Note</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="f">
+                        <img src="img/6.jpg" alt="Kill This Love - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Kill This Love</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="g">
+                        <img src="img/7.jpg" alt="Life Goes On - BTS">
+                        <div class="playlist-text">
+                            <h5>Life Goes On</h5>
+                            <p>BTS</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="h">
+                        <img src="img/8.jpg" alt="Ready For Love - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Ready For Love</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="i">
+                        <img src="img/9.jpg" alt="REALLY - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>REALLY</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="j">
+                        <img src="img/10.jpg" alt="SOLO - JENNIE">
+                        <div class="playlist-text">
+                            <h5>SOLO</h5>
+                            <p>JENNIE</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="k">
+                        <img src="img/11.jpg" alt="Yang Terbaik Bagimu - ADA Band">
+                        <div class="playlist-text">
+                            <h5>Yang Terbaik Bagimu</h5>
+                            <p>ADA Band</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+
+                    <li id="l">
+                        <img src="img/12.jpg" alt="Yeah Yeah Yeah - BLACKPINK">
+                        <div class="playlist-text">
+                            <h5>Yeah Yeah Yeah</h5>
+                            <p>BLACKPINK</p>
+                        </div>
+                        <p class="time">0:00</p>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <div class="op-none playback-bar">
+        <input type="range" min="0" value="0" max="100">
+        <div class="left-playback">
+            <img src="1.jpg" alt="">
+            <div class="playback-info">
+                <h5 class="playback-head">STAY</h5>
+                <p class="playback-artist">Justin Bieber & The Kid Laroi</p>
+            </div>
+        </div>
+        <div class="controls"><i class="back fas fa-step-backward"></i>
+            <i class="play fas fa-play"></i>
+            <i class="pause d-none fas fa-pause"></i>
+            <i class="next fas fa-step-forward"></i>
+        </div>
+        <div class="volume">
+            <i class="vol-up fas fa-volume-up"></i>
+        <i class="vol-down d-none fas fa-volume-mute"></i>
+        </div>
+        
+    </div>
+    <script src="Playlist.js"></script>
+</body>
+
+</html>

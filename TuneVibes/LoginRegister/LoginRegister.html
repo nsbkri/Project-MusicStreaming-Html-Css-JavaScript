@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TuneVibes</title>
+    <link rel="stylesheet" href="LoginRegister.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="container">
+        <div class="item">
+            <h2 class="logo"><i class='bx bxl-xing'></i>TuneVibes</h2>
+            <div class="text-item">
+                <h2>Welcome! <br><span>
+                    To Our Website
+                </span></h2>
+                <p>   </p>
+                <div class="social-icon">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-youtube'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i class='bx bxl-linkedin'></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- LOGIN FORM -->
+        <div class="login-section">
+            <div class="form-box login">
+                <form action="" onsubmit="return loginValid(event)">
+                    <h2>Masuk</h2>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" id="loginName" required>
+                        <label >Nama Pengguna</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="loginPass" required>
+                        <label>Kata Sandi</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox">Ingat saya</label>
+                        <a href="#">Lupa Kata Sandi</a>
+                    </div>
+                    <button class="btn">Masuk</button>
+                    <div class="create-account">
+                        <p>Belum punya Akun? <a href="#" class="register-link">Daftar</a></p>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- SIGN UP FORM  -->
+            <div class="form-box register">
+                <form action="" onsubmit="return regValid(event)">
+
+                    <h2>Daftar Akun</h2>
+
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-user'></i></span>
+                        <input type="text" id="regName" required>
+                        <label >Nama Pengguna</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-envelope'></i></span>
+                        <input type="email" id="regMail" required>
+                        <label >Email</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="regPass1" required>
+                        <label>Kata Sandi</label>
+                    </div>
+                    <div class="input-box">
+                        <span class="icon"><i class='bx bxs-lock-alt' ></i></span>
+                        <input type="password" id="regPass2" required>
+                        <label>Konfirmasi Kata Sandi</label>
+                    </div>
+                    <div class="remember-password">
+                        <label for=""><input type="checkbox" id="dataValid">Data saya sudah benar</label>
+                    </div>
+                    <button class="btn">Daftar</button>
+                    <div class="create-account">
+                        <p>Sudah memiliki akun? <a href="#" class="login-link">Masuk</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="LoginRegister.js"></script>
+</body>
+
+</html>

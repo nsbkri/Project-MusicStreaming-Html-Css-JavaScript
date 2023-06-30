@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="AboutIn.css">
+    <title>About TuneVibes</title>
+</head>
+
+<body>
+<header>
+    <div class="song_side">
+        <nav>
+            <ul>
+                <li class="link" data-url="../Beranda/Beranda.html">Beranda</li>
+                <li class="link" data-url="AboutIn.html">About<span></span></li>
+                <li class="link" data-url="../MyPlaylist/Playlist.html">My Playlist</li>
+            </ul>
+            <div class="profile">
+                <div class="user">
+                    <img src="../img/profile.png" alt="User" title="Example profile">
+                </div>
+                <div class="logout">
+                    <button title="Sign Out" id="logout">
+                        <i class="fas fa-sign-out-alt" style="font-size: 20px;"></i>
+                    </button>  
+                </div>
+            </div>   
+        </nav>
+       <div class="about">
+        <h1>Music Player For Windows</h1>
+        <p>Tune Vibes merupakan aplikasi pemutar music berbasis web</p>
+        <footer style="text-align: center;">
+        <p>Copyright &copy; 2023 Kelompok 6 ; Tune Vibes</p>
+    </footer>
+    </div>
+
+    <hr>
+    <footer style="text-align: center;">
+    <br>
+    <div class="galery">
+        <img src="img/wina.jpeg" width="100" style="border-radius: 50%;" figcaption>Wina Riska Nefia</figcaption>
+        <img src="img/nini.jpeg" width="100" style="border-radius: 50%;" figcaption>Nini Suryani Bakri</figcaption>
+        <img src="img/bla.JPG" width="100" style="border-radius: 50%;" figcaption>A. Dwi Emilia Ahsan</figcaption>
+        <img src="img/melisa.jpeg" width="100" style="border-radius: 50%;" figcaption>Melisa Kalaka</figcaption>
+    </div>
+</header>
+<script>
+    const logoutBtn = document.getElementById('logout');
+    logoutBtn.addEventListener('click', function() {
+        alert('Anda berhasil keluar.');
+        window.location.href = '../index.html';
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var links = document.getElementsByClassName("link");
+
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        var url = this.getAttribute("data-url");
+        window.location.href = url;
+        });
+      }
+    });
+  
+</script>
+</body>
+
+</html>

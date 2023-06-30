@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/background.jpg');
+    background-size: cover;
+    font-family: 'Poppins' , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+    width: 90%;
+    height: 100vh;
+    margin: 0%;
+}
+
+
+nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 10;
+  background: #292b2a;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: right;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+nav a{
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    color: #36e2ec;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+nav a:hover{
+  color: #fff;
+}
+nav a:nth-child(3){
+  color: #fff;
+}
+
+nav a span{
+  position: absolute;
+  width: 100%;
+  height: 2.5px;
+  background: #36e2ec;
+  bottom: -5px;
+  left: 0;
+  border-radius: 20px;
+}
+
+nav .profile{
+  display: flex;
+  justify-content: end;
+}
+nav .user{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 5px;
+}
+nav .user img{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 2px 2px 8px #131312;
+}
+
+nav .logout{
+  position: relative;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+nav .logout button{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #000000;
+  background: #d82222;
+  color: #000000;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+nav .logout button:active{
+  border: 2px solid #d82222;
+  background: none;
+  color: #ffffff;
+  transform: scale(0.9);
+}
+
+.main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 3.5rem 78.75px;
+  height: 80%;
+}
+
+.main .main-info {
+  margin: 1rem;
+}
+
+.main .main-info img {
+  width: 90%;
+  position: fixed;
+  margin-left: 100px;
+}
+
+.main .main-queue {
+  width: 100vw;
+}
+
+.main .main-queue .main-queue-head {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .main-queue .main-queue-head div {
+  width: 50%;
+  padding: 0.8rem 0;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.main .main-queue .main-queue-head div h4 {
+  font-family: 'Poppins' , sans-serif;
+  font-weight: 500;
+}
+
+.main .main-queue .main-queue-playlist {
+  width: 100%;
+  font-family: 'Poppins' , sans-serif;
+}
+
+.main .main-queue .main-queue-playlist ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  list-style-type: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main .main-queue .main-queue-playlist ul li {
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 0.8rem;
+  cursor: pointer;
+}
+
+.main .main-queue .main-queue-playlist ul li:nth-child(12) {
+  margin-bottom: 60px;
+}
+
+
+.main .main-queue .main-queue-playlist ul li img {
+  width: 10%;
+  float: left;
+}
+
+.main .main-queue .main-queue-playlist ul li div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  padding: 0 1rem;
+}
+
+.main .main-queue .main-queue-playlist ul li div h5 {
+  margin-bottom: 0.2rem;
+  font-size: 20px;
+  font-weight: 500;
+  color: #36e2ec;
+}
+
+.main .main-queue .main-queue-playlist ul li div p {
+  color: #ffffff;
+  font-size: 15px;
+}
+
+.main .main-queue .main-queue-playlist ul li .time {
+  float: right;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.active {
+  position: relative;
+  color: white !important;
+}
+
+.active::after {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: white;
+}
+
+.playback-bar {
+  width: 100vw;
+  font-family: 'Poppins' , sans-serif;
+  height: 4rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+  background: #212121;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+  -webkit-transition: 500ms ease-out;
+  transition: 500ms ease-out;
+}
+
+.playback-bar input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+}
+
+.playback-bar .controls {
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+}
+
+.playback-bar .controls i {
+  margin: 8px;
+}
+
+.playback-bar .left-playback {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  float: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.playback-bar .left-playback img {
+  width: 3rem;
+  height: 3rem;
+  margin: 0 1rem 0 0;
+}
+
+.playback-bar .left-playback .playback-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.playback-bar .left-playback .playback-info p {
+  font-size: 10px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.1rem 0;
+}
+
+.active-song {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid white !important;
+  -webkit-transition: 500ms ease-in-out;
+  transition: 500ms ease-in-out;
+}
+
+.d-none {
+  display: none !important;
+}
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.op-none {
+  left: -100%;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.vol-up,
+.vol-down,
+.play,
+.pause,
+.next,
+.back {
+  cursor: pointer;
+}
+
+input[type='range'] {
+  overflow: hidden;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #ff0000;
+  cursor: pointer;
+  -webkit-box-shadow: -100vw 0px 0 100vw #ff0000;
+          box-shadow: -100vw 0px 0 100vw #ff0000;
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    padding: 2.5rem 0 0 0;
+    -webkit-box-align: none;
+        -ms-flex-align: none;
+            align-items: none;
+  }
+  .main .main-info {
+    height: 100vh;
+    margin: 0 2rem;
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .main-info img {
+    width: 300px;
+    height: 300px;
+  }
+  .main-queue {
+    height: 100vh;
+  }
+  .playback-bar {
+    padding-right: 2rem;
+  }
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="AboutOut.css">
+    <title>About TuneVibes</title>
+</head>
+
+<body>
+<header>
+    <div class="song_side">
+        <nav>
+            <ul>
+                <li class="link" data-url="../index.html">Beranda</li>
+                <li class="link" data-url="About.html">About<span></span></li>
+                <li class="SignIn" data-url="../LoginRegister/LoginRegister.html">My Playlist</li>
+            </ul>
+            <div class="profile">
+                    <button title="Sign In" id="login" class="login" style="font-size: 17px;">
+                        Masuk
+                        <i class="fas fa-sign-in-alt" style="font-size: 20px;"></i>
+                    </button>  
+            </div>   
+        </nav>
+       <div class="about">
+        <h1>Music Player For Windows</h1>
+        <p>Tune Vibes merupakan aplikasi pemutar music berbasis web</p>
+        <footer style="text-align: center;">
+        <p>Copyright &copy; 2023 Kelompok 6 ; Tune Vibes</p>
+    </footer>
+    </div>
+
+    <hr>
+    <footer style="text-align: center;">
+    <br>
+    <div class="galery">
+        <img src="img/wina.jpeg" width="100" style="border-radius: 50%;" figcaption>Wina Riska Nefia</figcaption>
+        <img src="img/nini.jpeg" width="100" style="border-radius: 50%;" figcaption>Nini Suryani Bakri</figcaption>
+        <img src="img/bla.JPG" width="100" style="border-radius: 50%;" figcaption>A. Dwi Emilia Ahsan</figcaption>
+        <img src="img/melisa.jpeg" width="100" style="border-radius: 50%;" figcaption>Melisa Kalaka</figcaption>
+    </div>
+</header>
+<script>
+    const loginBtn = document.getElementById('login');
+    loginBtn.addEventListener('click', function() {
+    window.location.href = '../LoginRegister/LoginRegister.html';
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+    var links = document.getElementsByClassName("link");
+    var SignIn = document.getElementsByClassName("SignIn");
+    
+    for (var i = 0; i < links.length; i++) {
+      links[i].addEventListener("click", function() {
+        var url = this.getAttribute("data-url");
+        window.location.href = url;
+      });
+    }
+
+    for (var i = 0; i < SignIn.length; i++) {
+      SignIn [i].addEventListener("click", function(e) {
+          e.preventDefault();
+          var url = this.getAttribute("data-url");
+          var confirmation = confirm("Anda harus login terlebih dahulu untuk membuka Playlist\nApakah Anda ingin Login?");
+          if (confirmation) {
+            window.location.href = url;
+          }
+        });
+      }
+    });
+</script>
+</body>
+
+</html>
